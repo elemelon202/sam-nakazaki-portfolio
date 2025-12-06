@@ -1,45 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState } from "react";
 import { FadeIn } from "./FadeIn";
 
 export function Contact() {
-  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
-    "idle"
-  );
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setStatus("sending");
-
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-
-    try {
-      const response = await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams({
-          "form-name": "contact",
-          name: formData.get("name") as string,
-          email: formData.get("email") as string,
-          message: formData.get("message") as string,
-        }).toString(),
-      });
-
-      if (response.ok) {
-        setStatus("sent");
-        form.reset();
-        setTimeout(() => setStatus("idle"), 3000);
-      } else {
-        setStatus("error");
-      }
-    } catch {
-      setStatus("error");
-    }
-  };
-
   return (
     <section
       id="contact"
@@ -62,12 +26,11 @@ export function Contact() {
           <form
             name="contact"
             method="POST"
+            action="/"
             data-netlify="true"
             netlify-honeypot="bot-field"
-            onSubmit={handleSubmit}
             className="mt-10 space-y-6"
           >
-            {/* Hidden fields for Netlify */}
             <input type="hidden" name="form-name" value="contact" />
             <p className="hidden">
               <label>
@@ -128,15 +91,11 @@ export function Contact() {
 
             <motion.button
               type="submit"
-              disabled={status === "sending"}
-              className="w-full rounded-lg bg-gradient-to-r from-purple-600 to-indigo-600 px-6 py-3 font-medium text-white shadow-lg shadow-purple-500/25 transition-all hover:shadow-xl hover:shadow-purple-500/30 disabled:cursor-not-allowed disabled:opacity-70"
-              whileHover={{ scale: status === "sending" ? 1 : 1.02 }}
-              whileTap={{ scale: status === "sending" ? 1 : 0.98 }}
+              className="w-full rounded-lg bg-gradient-to-r from-purple-600 to-indigo-600 px-6 py-3 font-medium text-white shadow-lg shadow-purple-500/25 transition-all hover:shadow-xl hover:shadow-purple-500/30"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
             >
-              {status === "idle" && "Send Message"}
-              {status === "sending" && "Sending..."}
-              {status === "sent" && "Message Sent!"}
-              {status === "error" && "Error - Try Again"}
+              Send Message
             </motion.button>
           </form>
 
