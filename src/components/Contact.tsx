@@ -89,14 +89,12 @@ export function Contact() {
               />
             </div>
 
-            <motion.button
+            <button
               type="submit"
-              className="w-full rounded-lg bg-gradient-to-r from-purple-600 to-indigo-600 px-6 py-3 font-medium text-white shadow-lg shadow-purple-500/25 transition-all hover:shadow-xl hover:shadow-purple-500/30"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+              className="w-full rounded-lg bg-gradient-to-r from-purple-600 to-indigo-600 px-6 py-3 font-medium text-white shadow-lg shadow-purple-500/25 transition-all hover:scale-[1.02] hover:shadow-xl hover:shadow-purple-500/30 active:scale-[0.98]"
             >
               Send Message
-            </motion.button>
+            </button>
           </form>
 
           <div className="mt-12 flex flex-wrap justify-center gap-8">
