@@ -23,11 +23,10 @@ const projects = [
     image: "/projects/game-hub.png",
   },
   {
-    title: "Dream Hero",
-    description:
-      "A web app that utilizes AI to generate imaginative bedtime stories for children. Stories are generated through Open Ai, and story images make use of Gemini's great image generation. Token usage is kept to a minimum, and image storage is handled externally through Cloudinary.",
-    tech: ["Ruby on Rails", "PostgreSQL", "OpenAI", "Gemini"],
-    github: "https://github.com/kylehansen17/dream_hero",
+    title: "Black Dog Express",
+    description: "A comprehensive road transport management system built for a UK haulage company. Features include: - Customer Portal: Real-time shipment tracking, instant quote calculator, and online booking - Admin Dashboard: Order management, driver assignment, route planning, and financial reporting with P&L analytics - Driver Mobile App: Digital run sheets, vehicle inspection checklists, proof-of-delivery capture with e-signatures, and real-time journey logging. TEST: admin@blackdogexpress.co.uk, password - password123",
+    tech: ["React", "TypeScript", "Ruby on Rails API", "PostgreSQL", "TailwindCSS", "React Query"],
+    github: "https://github.com/elemelon202/black-dog",
   },
 ];
 
