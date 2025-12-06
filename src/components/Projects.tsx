@@ -7,7 +7,7 @@ const projects = [
   {
     title: "Kokai Soundworks",
     description:
-      "A network to connect local musicians with each other, fans, and venues. Crowd funding to support local artists and venues.",
+      "A network to connect local musicians with each other, fans, and venues. Crowd funding to support local artists and venues. This full stack application makes great use of Rails's MVC framework to efficiently handle and display data. Payments are handled with Stripe, and Devise and Pundit handle authorization and authentication.",
     tech: ["Ruby", "Rails", "Heroku", "Postgresql", "Redis"],
     github: "https://github.com/elemelon202/kokai-soundworks",
     live: "https://www.kokai-soundworks.com",
@@ -15,17 +15,16 @@ const projects = [
   {
     title: "Dream Hero",
     description:
-      "A web app that utilizes AI to generate imaginative bedtime stories for children",
+      "A web app that utilizes AI to generate imaginative bedtime stories for children. Stories are generated through Open Ai, and story images make use of Gemini's great image generation. Token usage is kept to a minimum, and image storage is handled externally through Cloudinary.",
     tech: ["Ruby on Rails", "PostgreSQL", "OpenAI", "Gemini"],
-    github: "https://github.com/yourusername/project-two",
-    live: "https://project-two.herokuapp.com",
+    github: "https://github.com/kylehansen17/dream_hero",
   },
   {
-    title: "Project Three",
+    title: "Game Hub",
     description:
-      "A third project demonstrating full-stack development capabilities.",
-    tech: ["React", "Rails API", "AWS"],
-    github: "https://github.com/yourusername/project-three",
+      "A React project fetching recent data about popular video games. The app makes great use of Chakra UI components, and delivers a comfortable user experience with minimal wait time.",
+    tech: ["React", "Typescript", "Vercel"],
+    github: "https://github.com/elemelon202/game-hub",
   },
 ];
 
