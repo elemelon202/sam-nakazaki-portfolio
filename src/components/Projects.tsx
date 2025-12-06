@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { FadeIn } from "./FadeIn";
 
@@ -11,6 +12,15 @@ const projects = [
     tech: ["Ruby", "Rails", "Heroku", "Postgresql", "Redis"],
     github: "https://github.com/elemelon202/kokai-soundworks",
     live: "https://www.kokai-soundworks.com",
+    image: "/projects/kokai-soundworks.png",
+  },
+  {
+    title: "Game Hub",
+    description:
+      "A React project fetching recent data about popular video games. The app makes great use of Chakra UI components, and delivers a comfortable user experience with minimal wait time.",
+    tech: ["React", "Typescript", "Vercel"],
+    github: "https://github.com/elemelon202/game-hub",
+    image: "/projects/game-hub.png",
   },
   {
     title: "Dream Hero",
@@ -19,29 +29,87 @@ const projects = [
     tech: ["Ruby on Rails", "PostgreSQL", "OpenAI", "Gemini"],
     github: "https://github.com/kylehansen17/dream_hero",
   },
-  {
-    title: "Game Hub",
-    description:
-      "A React project fetching recent data about popular video games. The app makes great use of Chakra UI components, and delivers a comfortable user experience with minimal wait time.",
-    tech: ["React", "Typescript", "Vercel"],
-    github: "https://github.com/elemelon202/game-hub",
-  },
 ];
+
+function DeviceMockup({ src, alt }: { src: string; alt: string }) {
+  return (
+    <div className="relative mx-auto w-full max-w-lg px-6 py-8">
+      {/* Laptop frame */}
+      <div className="relative transition-transform duration-300 group-hover:scale-[1.02]">
+        {/* Screen bezel */}
+        <div className="relative rounded-t-xl bg-zinc-800 p-2 shadow-xl dark:bg-zinc-700">
+          {/* Camera dot */}
+          <div className="absolute left-1/2 top-1 h-1.5 w-1.5 -translate-x-1/2 rounded-full bg-zinc-600 dark:bg-zinc-500" />
+
+          {/* Screen */}
+          <div className="relative aspect-[16/10] overflow-hidden rounded-sm bg-zinc-900">
+            <Image
+              src={src}
+              alt={alt}
+              fill
+              className="object-cover object-top"
+            />
+          </div>
+        </div>
+
+        {/* Laptop base/keyboard */}
+        <div className="relative h-3 rounded-b-lg bg-gradient-to-b from-zinc-700 to-zinc-800 shadow-lg dark:from-zinc-600 dark:to-zinc-700">
+          {/* Notch */}
+          <div className="absolute left-1/2 top-0 h-1 w-16 -translate-x-1/2 rounded-b-lg bg-zinc-600 dark:bg-zinc-500" />
+        </div>
+
+        {/* Bottom edge / stand hint */}
+        <div className="mx-auto h-1 w-1/3 rounded-b-lg bg-zinc-700 dark:bg-zinc-600" />
+      </div>
+    </div>
+  );
+}
+
+function PlaceholderMockup() {
+  return (
+    <div className="relative mx-auto w-full max-w-lg px-6 py-8">
+      <div className="relative">
+        <div className="relative rounded-t-xl bg-zinc-800 p-2 dark:bg-zinc-700">
+          <div className="absolute left-1/2 top-1 h-1.5 w-1.5 -translate-x-1/2 rounded-full bg-zinc-600" />
+          <div className="relative flex aspect-[16/10] items-center justify-center rounded-sm bg-zinc-900">
+            <svg
+              className="h-12 w-12 text-zinc-700"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={1.5}
+                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div className="relative h-3 rounded-b-lg bg-gradient-to-b from-zinc-700 to-zinc-800">
+          <div className="absolute left-1/2 top-0 h-1 w-16 -translate-x-1/2 rounded-b-lg bg-zinc-600" />
+        </div>
+        <div className="mx-auto h-1 w-1/3 rounded-b-lg bg-zinc-700" />
+      </div>
+    </div>
+  );
+}
 
 export function Projects() {
   return (
     <section id="projects" className="px-6 py-24">
-      <div className="mx-auto max-w-3xl">
+      <div className="mx-auto max-w-4xl">
         <FadeIn>
           <h2 className="bg-gradient-to-r from-zinc-900 to-zinc-600 bg-clip-text text-3xl font-bold tracking-tight text-transparent dark:from-white dark:to-zinc-400">
             Projects
           </h2>
         </FadeIn>
-        <div className="mt-10 space-y-6">
+        <div className="mt-10 space-y-12">
           {projects.map((project, index) => (
             <FadeIn key={project.title} delay={0.1 * (index + 1)}>
               <motion.div
-                className="group relative overflow-hidden rounded-xl border border-zinc-200/50 bg-white p-6 shadow-lg shadow-zinc-200/20 transition-all dark:border-zinc-800 dark:bg-zinc-900 dark:shadow-none"
+                className="group relative overflow-hidden rounded-2xl border border-zinc-200/50 bg-gradient-to-b from-zinc-50 to-white shadow-lg shadow-zinc-200/20 transition-all dark:border-zinc-800 dark:from-zinc-900 dark:to-zinc-950 dark:shadow-none"
                 whileHover={{
                   y: -4,
                   transition: { duration: 0.2 },
@@ -49,7 +117,18 @@ export function Projects() {
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-indigo-500/5 opacity-0 transition-opacity group-hover:opacity-100 dark:from-purple-500/10 dark:to-indigo-500/10" />
 
-                <div className="relative">
+                {/* Device Mockup */}
+                {project.image && (
+                  <div className="relative">
+                    <DeviceMockup
+                      src={project.image}
+                      alt={`${project.title} screenshot`}
+                    />
+                  </div>
+                )}
+
+                {/* Project Details */}
+                <div className={`relative px-6 pb-6 ${!project.image ? "pt-6" : ""}`}>
                   <div className="flex items-start justify-between">
                     <h3 className="text-xl font-semibold text-zinc-900 dark:text-white">
                       {project.title}
@@ -104,7 +183,7 @@ export function Projects() {
                     </div>
                   </div>
 
-                  <p className="mt-3 text-zinc-600 dark:text-zinc-400">
+                  <p className="mt-3 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
                     {project.description}
                   </p>
 
