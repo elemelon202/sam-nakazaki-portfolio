@@ -27,6 +27,7 @@ const projects = [
     description: "A comprehensive road transport management system built for a UK haulage company. Features include: - Customer Portal: Real-time shipment tracking, instant quote calculator, and online booking - Admin Dashboard: Order management, driver assignment, route planning, and financial reporting with P&L analytics - Driver Mobile App: Digital run sheets, vehicle inspection checklists, proof-of-delivery capture with e-signatures, and real-time journey logging. TEST: admin@blackdogexpress.co.uk, password - password123",
     tech: ["React", "TypeScript", "Ruby on Rails API", "PostgreSQL", "TailwindCSS", "React Query"],
     github: "https://github.com/elemelon202/black-dog",
+    image: "/projects/black-dog.png"
   },
 ];
 
