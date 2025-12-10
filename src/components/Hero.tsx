@@ -1,20 +1,77 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { AnimatedBackground } from "./AnimatedBackground";
 
 export function Hero() {
   return (
     <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 text-center">
-      <AnimatedBackground />
+      {/* Animated gradient background */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-50 via-white to-indigo-50 dark:from-zinc-950 dark:via-zinc-900 dark:to-purple-950/20" />
+        <motion.div
+          className="absolute -left-1/4 top-1/4 h-[600px] w-[600px] rounded-full bg-purple-200/50 blur-3xl dark:bg-purple-900/20"
+          animate={{
+            x: [0, 100, 0],
+            y: [0, -50, 0],
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        />
+        <motion.div
+          className="absolute -right-1/4 bottom-1/4 h-[500px] w-[500px] rounded-full bg-indigo-200/50 blur-3xl dark:bg-indigo-900/20"
+          animate={{
+            x: [0, -80, 0],
+            y: [0, 80, 0],
+          }}
+          transition={{
+            duration: 25,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        />
+        <motion.div
+          className="absolute left-1/3 top-1/2 h-[400px] w-[400px] rounded-full bg-pink-200/30 blur-3xl dark:bg-pink-900/10"
+          animate={{
+            x: [0, 50, 0],
+            y: [0, 100, 0],
+          }}
+          transition={{
+            duration: 30,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        />
+      </div>
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
+        className="relative"
       >
+        {/* Badge */}
+        <motion.div
+          className="mb-8 flex justify-center"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="inline-flex items-center gap-2 rounded-full border border-purple-200 bg-white/80 px-4 py-2 backdrop-blur-sm dark:border-purple-800 dark:bg-zinc-900/80">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
+            </span>
+            <span className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
+              Available for new projects
+            </span>
+          </div>
+        </motion.div>
+
         <motion.h1
-          className="bg-gradient-to-r from-purple-600 via-pink-500 to-indigo-600 bg-clip-text text-5xl font-bold tracking-tight text-transparent dark:from-purple-400 dark:via-pink-400 dark:to-indigo-400 sm:text-7xl"
+          className="text-5xl font-bold tracking-tight text-zinc-900 dark:text-white sm:text-7xl lg:text-8xl"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -22,75 +79,119 @@ export function Hero() {
           Sam Nakazaki
         </motion.h1>
 
-        <motion.p
-          className="mt-4 text-xl text-zinc-600 dark:text-zinc-400 sm:text-2xl"
+        <motion.div
+          className="mt-4"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Full Stack Developer
-        </motion.p>
+          <span className="bg-gradient-to-r from-purple-600 via-pink-500 to-indigo-600 bg-clip-text text-2xl font-semibold text-transparent dark:from-purple-400 dark:via-pink-400 dark:to-indigo-400 sm:text-3xl">
+            Full Stack Developer
+          </span>
+        </motion.div>
 
         <motion.p
-          className="mx-auto mt-6 max-w-2xl text-lg text-zinc-500 dark:text-zinc-500"
+          className="mx-auto mt-6 max-w-xl text-lg text-zinc-600 dark:text-zinc-400"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          Building web applications with Ruby on Rails, React, and Next.js
+          Building web applications with Ruby on Rails, React, and Next.js.
+          <br />
+          <span className="text-zinc-500">Based in Tokyo, Japan.</span>
         </motion.p>
 
         <motion.div
-          className="mt-10 flex flex-wrap justify-center gap-4"
+          className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
           <motion.a
             href="#projects"
-            className="group relative overflow-hidden rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 px-8 py-3 text-sm font-medium text-white shadow-lg shadow-purple-500/25 transition-all hover:shadow-xl hover:shadow-purple-500/30"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-purple-500/25 transition-all hover:shadow-xl hover:shadow-purple-500/30"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
           >
-            <span className="relative z-10">View Projects</span>
-            <div className="absolute inset-0 -z-0 bg-gradient-to-r from-indigo-600 to-purple-600 opacity-0 transition-opacity group-hover:opacity-100" />
+            <span>View Projects</span>
+            <svg className="h-5 w-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </motion.a>
+          <motion.a
+            href="/services"
+            className="inline-flex items-center gap-2 rounded-full border-2 border-zinc-200 bg-white/80 px-8 py-4 text-base font-semibold text-zinc-700 backdrop-blur-sm transition-all hover:border-purple-300 hover:text-purple-600 dark:border-zinc-700 dark:bg-zinc-900/80 dark:text-zinc-300 dark:hover:border-purple-600 dark:hover:text-purple-400"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            Services
           </motion.a>
           <motion.a
             href="#contact"
-            className="rounded-full border-2 border-zinc-300 px-8 py-3 text-sm font-medium text-zinc-700 backdrop-blur-sm transition-all hover:border-purple-500 hover:text-purple-600 dark:border-zinc-700 dark:text-zinc-300 dark:hover:border-purple-400 dark:hover:text-purple-400"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            className="inline-flex items-center gap-2 rounded-full border-2 border-zinc-200 bg-white/80 px-8 py-4 text-base font-semibold text-zinc-700 backdrop-blur-sm transition-all hover:border-purple-300 hover:text-purple-600 dark:border-zinc-700 dark:bg-zinc-900/80 dark:text-zinc-300 dark:hover:border-purple-600 dark:hover:text-purple-400"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
           >
             Contact Me
           </motion.a>
         </motion.div>
+
+        {/* Social links */}
+        <motion.div
+          className="mt-12 flex justify-center gap-6"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 1 }}
+        >
+          <motion.a
+            href="https://github.com/elemelon202"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex h-12 w-12 items-center justify-center rounded-full border border-zinc-200 bg-white/80 text-zinc-500 backdrop-blur-sm transition-all hover:border-purple-300 hover:text-purple-600 dark:border-zinc-700 dark:bg-zinc-900/80 dark:text-zinc-400 dark:hover:border-purple-600 dark:hover:text-purple-400"
+            whileHover={{ y: -4 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                fillRule="evenodd"
+                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                clipRule="evenodd"
+              />
+            </svg>
+          </motion.a>
+          <motion.a
+            href="https://www.linkedin.com/in/sam-nakazaki-61b6a038b/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex h-12 w-12 items-center justify-center rounded-full border border-zinc-200 bg-white/80 text-zinc-500 backdrop-blur-sm transition-all hover:border-purple-300 hover:text-purple-600 dark:border-zinc-700 dark:bg-zinc-900/80 dark:text-zinc-400 dark:hover:border-purple-600 dark:hover:text-purple-400"
+            whileHover={{ y: -4 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+          </motion.a>
+        </motion.div>
       </motion.div>
 
+      {/* Scroll indicator */}
       <motion.div
         className="absolute bottom-10"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2 }}
       >
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
+        <motion.a
+          href="#about"
+          className="flex flex-col items-center gap-2 text-zinc-400 transition-colors hover:text-purple-500"
+          animate={{ y: [0, 8, 0] }}
           transition={{ repeat: Infinity, duration: 2 }}
-          className="text-zinc-400"
         >
-          <svg
-            className="h-6 w-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M19 14l-7 7m0 0l-7-7m7 7V3"
-            />
+          <span className="text-xs font-medium uppercase tracking-wider">Scroll</span>
+          <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>
-        </motion.div>
+        </motion.a>
       </motion.div>
     </section>
   );
