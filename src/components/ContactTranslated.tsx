@@ -110,15 +110,10 @@ export function ContactTranslated() {
                 {t.contact.formTitle}
               </h3>
               <form
-                name="contact"
+                action="https://formspree.io/f/myzrnvek"
                 method="POST"
-                action="/success"
-                data-netlify="true"
-                netlify-honeypot="bot-field"
                 className="mt-6 space-y-5"
               >
-                <input type="hidden" name="form-name" value="contact" />
-                <input type="hidden" name="bot-field" />
 
                 <div>
                   <label

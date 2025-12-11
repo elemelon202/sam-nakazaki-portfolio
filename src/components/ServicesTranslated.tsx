@@ -427,15 +427,10 @@ export function ServicesTranslated() {
 
           <FadeIn delay={0.1}>
             <form
-              name="services"
+              action="https://formspree.io/f/myzrnvek"
               method="POST"
-              action="/success"
-              data-netlify="true"
-              netlify-honeypot="bot-field"
               className="mt-10 space-y-6"
             >
-              <input type="hidden" name="form-name" value="services" />
-              <input type="hidden" name="bot-field" />
 
               <div>
                 <label htmlFor="services-name" className="block text-sm font-medium text-zinc-700 dark:text-zinc-300">
