@@ -7,6 +7,8 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
+const siteUrl = "https://samnakazakideveloper.me";
+
 export async function generateMetadata({
   params,
 }: {
@@ -20,11 +22,12 @@ export async function generateMetadata({
   const description = isJapanese
     ? "Ruby on Rails、React、Next.jsでWebアプリケーションを開発するフルスタックデベロッパー"
     : "Full Stack Developer building web applications with Ruby on Rails, React, and Next.js";
-  const ogImage = isJapanese ? "/og-ja.png" : "/og-en.png";
+  const ogImage = isJapanese ? `${siteUrl}/og-ja.png` : `${siteUrl}/og-en.png`;
 
   return {
     title,
     description,
+    metadataBase: new URL(siteUrl),
     openGraph: {
       title,
       description,
