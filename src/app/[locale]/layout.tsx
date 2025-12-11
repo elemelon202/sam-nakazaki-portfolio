@@ -31,12 +31,15 @@ export async function generateMetadata({
     openGraph: {
       title,
       description,
+      url: `${siteUrl}/${locale}`,
+      siteName: isJapanese ? "中崎サム" : "Sam Nakazaki",
       images: [
         {
           url: ogImage,
           width: 1200,
           height: 630,
           alt: title,
+          type: "image/png",
         },
       ],
       locale: isJapanese ? "ja_JP" : "en_US",
