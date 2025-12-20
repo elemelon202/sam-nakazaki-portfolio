@@ -45,7 +45,12 @@ export function ContactTranslated() {
                   </div>
                   <div>
                     <p className="text-sm font-medium text-zinc-500 dark:text-zinc-500">{t.contact.email}</p>
-                    <p className="text-zinc-900 dark:text-white">sm.nakazaki@gmail.com</p>
+                    <a
+                      href="mailto:sam@samnakazakideveloper.me"
+                      className="text-zinc-900 hover:text-purple-600 dark:text-white dark:hover:text-purple-400 transition-colors"
+                    >
+                      sam@samnakazakideveloper.me
+                    </a>
                   </div>
                 </div>
 

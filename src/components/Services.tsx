@@ -28,20 +28,20 @@ const howItWorks = [
 
 const faqs = [
   {
-    question: "What if I need more than a landing page?",
-    answer: "Let's talk. I also build full websites, but landing pages are where I focus.",
+    question: "How do you scope larger projects?",
+    answer: "We start with a call to understand what you need. I'll ask about your users, your workflow, and what success looks like. Then I send a clear proposal with scope, timeline, and cost—no surprises.",
   },
   {
-    question: "Can you write the copy too?",
-    answer: "I can help refine it, but you know your business best. If you need a copywriter, I can recommend someone.",
-  },
-  {
-    question: "What's your tech stack?",
-    answer: "HTML/CSS/JS for most landing pages. React, Rails, or other frameworks if the project needs it.",
+    question: "Can you work with our existing systems?",
+    answer: "Yes. I can integrate with your current tools, APIs, or databases. If you're starting fresh, I'll recommend what makes sense for your use case.",
   },
   {
     question: "Do you work with Japanese companies too?",
     answer: "Yes—I'm fully bilingual and comfortable working in either language.",
+  },
+  {
+    question: "What happens after launch?",
+    answer: "I offer ongoing support if you need it—maintenance, updates, fixes. Or I can hand everything over and you're set. Your call.",
   },
 ];
 
@@ -113,16 +113,16 @@ export function Services() {
           {/* Main headline */}
           <FadeIn delay={0.1}>
             <h1 className="mt-8 pb-2 text-center text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl">
-              <span className="text-zinc-900 dark:text-white">Landing Pages for</span>
+              <span className="text-zinc-900 dark:text-white">Web Tools for</span>
               <span className="mt-2 block bg-gradient-to-r from-purple-600 via-pink-500 to-indigo-600 bg-clip-text pb-2 text-transparent">
-                Startups in Japan
+                Foreign Businesses in Japan
               </span>
             </h1>
           </FadeIn>
 
           <FadeIn delay={0.2}>
             <p className="mx-auto mt-6 max-w-2xl text-center text-lg text-zinc-600 dark:text-zinc-400 sm:text-xl">
-              Fast delivery. Clear communication. No surprises.
+              From simple sites to custom applications. Fast, clear, delivered.
             </p>
           </FadeIn>
 
@@ -212,7 +212,7 @@ export function Services() {
                     I&apos;m Sam Nakazaki
                   </h2>
                   <p className="mt-4 text-lg leading-relaxed text-zinc-600 dark:text-zinc-400">
-                    A bilingual web developer who builds landing pages for startups in Japan.
+                    A bilingual developer who builds web tools for foreign businesses in Japan—from simple sites to custom applications.
                   </p>
                   <p className="mt-4 text-zinc-600 dark:text-zinc-400">
                     I reply fast, communicate in plain English (or Japanese), and actually deliver when I say I will.
@@ -319,9 +319,53 @@ export function Services() {
             </p>
           </FadeIn>
 
-          <div className="mt-12 grid gap-8 lg:grid-cols-2">
-            {/* Full Service Card */}
+          <div className="mt-12 grid gap-8 lg:grid-cols-3">
+            {/* Quick Builds Card */}
             <FadeIn delay={0.1}>
+              <motion.div
+                className="relative overflow-hidden rounded-3xl border border-zinc-200 bg-white p-8 shadow-lg dark:border-zinc-800 dark:bg-zinc-900"
+                whileHover={{ y: -8, transition: { duration: 0.3 } }}
+              >
+                <h3 className="text-2xl font-bold text-zinc-900 dark:text-white">Quick Builds</h3>
+                <div className="mt-4 flex items-baseline gap-2">
+                  <span className="text-3xl font-bold text-zinc-900 dark:text-white">¥80,000 – ¥150,000</span>
+                </div>
+                <p className="mt-4 text-zinc-600 dark:text-zinc-400">
+                  Landing pages, single-page sites. Get online fast.
+                </p>
+                <ul className="mt-8 space-y-4">
+                  {[
+                    "1–2 week delivery",
+                    "Mobile responsive",
+                    "Basic SEO setup",
+                    "You own everything",
+                  ].map((feature, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <div className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-zinc-100 dark:bg-zinc-800">
+                        <svg className="h-4 w-4 text-zinc-600 dark:text-zinc-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <span className="text-zinc-700 dark:text-zinc-300">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-6 text-sm text-zinc-500 dark:text-zinc-500">
+                  Best for: Companies who need a simple site, fast.
+                </p>
+                <motion.a
+                  href="#services-contact"
+                  className="mt-8 block w-full rounded-xl border-2 border-zinc-200 py-4 text-center font-semibold text-zinc-700 transition-all hover:border-purple-300 hover:text-purple-600 dark:border-zinc-700 dark:text-zinc-300 dark:hover:border-purple-600 dark:hover:text-purple-400"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  Get started
+                </motion.a>
+              </motion.div>
+            </FadeIn>
+
+            {/* Web Applications Card */}
+            <FadeIn delay={0.2}>
               <motion.div
                 className="relative overflow-hidden rounded-3xl border-2 border-purple-200 bg-white p-8 shadow-xl dark:border-purple-800 dark:bg-zinc-900"
                 whileHover={{ y: -8, transition: { duration: 0.3 } }}
@@ -331,21 +375,20 @@ export function Services() {
                   <div className="inline-flex rounded-full bg-purple-100 px-3 py-1 dark:bg-purple-900/50">
                     <span className="text-sm font-semibold text-purple-700 dark:text-purple-300">Most Popular</span>
                   </div>
-                  <h3 className="mt-4 text-2xl font-bold text-zinc-900 dark:text-white">Full Service</h3>
+                  <h3 className="mt-4 text-2xl font-bold text-zinc-900 dark:text-white">Web Applications</h3>
                   <div className="mt-4 flex items-baseline gap-2">
-                    <span className="text-4xl font-bold text-zinc-900 dark:text-white">¥150,000</span>
-                    <span className="text-zinc-500">starting</span>
+                    <span className="text-3xl font-bold text-zinc-900 dark:text-white">¥300,000+</span>
+                    <span className="text-zinc-500">scoped per project</span>
                   </div>
                   <p className="mt-4 text-zinc-600 dark:text-zinc-400">
-                    I design and build your landing page from scratch.
+                    Booking systems, dashboards, internal tools. Built to spec.
                   </p>
                   <ul className="mt-8 space-y-4">
                     {[
-                      "Custom design tailored to your brand",
-                      "Mobile responsive",
-                      "Basic SEO setup",
-                      "One round of revisions",
-                      "You own everything",
+                      "User authentication",
+                      "Database & admin panels",
+                      "Custom functionality",
+                      "Timeline depends on scope",
                     ].map((feature, i) => (
                       <li key={i} className="flex items-start gap-3">
                         <div className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-purple-100 dark:bg-purple-900/50">
@@ -358,7 +401,7 @@ export function Services() {
                     ))}
                   </ul>
                   <p className="mt-6 text-sm text-zinc-500 dark:text-zinc-500">
-                    Best for: Companies who need the whole thing handled.
+                    Best for: Businesses needing custom tools that work.
                   </p>
                   <motion.a
                     href="#services-contact"
@@ -372,25 +415,26 @@ export function Services() {
               </motion.div>
             </FadeIn>
 
-            {/* Build Only Card */}
-            <FadeIn delay={0.2}>
+            {/* Ongoing Support Card */}
+            <FadeIn delay={0.3}>
               <motion.div
                 className="relative overflow-hidden rounded-3xl border border-zinc-200 bg-white p-8 shadow-lg dark:border-zinc-800 dark:bg-zinc-900"
                 whileHover={{ y: -8, transition: { duration: 0.3 } }}
               >
-                <h3 className="text-2xl font-bold text-zinc-900 dark:text-white">Build Only</h3>
+                <h3 className="text-2xl font-bold text-zinc-900 dark:text-white">Ongoing Support</h3>
                 <div className="mt-4 flex items-baseline gap-2">
-                  <span className="text-4xl font-bold text-zinc-900 dark:text-white">¥80,000</span>
-                  <span className="text-zinc-500">starting</span>
+                  <span className="text-3xl font-bold text-zinc-900 dark:text-white">Monthly retainer</span>
                 </div>
+                <p className="mt-1 text-sm text-zinc-500">price on request</p>
                 <p className="mt-4 text-zinc-600 dark:text-zinc-400">
-                  Already have a Figma or Photoshop design? I&apos;ll bring it to life.
+                  Keep your site running smoothly. I handle the technical side.
                 </p>
                 <ul className="mt-8 space-y-4">
                   {[
-                    "Pixel-perfect build from your design",
-                    "Mobile responsive",
-                    "Basic SEO setup",
+                    "Maintenance & updates",
+                    "Bug fixes & iterations",
+                    "Hosting management",
+                    "Priority response",
                   ].map((feature, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <div className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-zinc-100 dark:bg-zinc-800">
@@ -403,7 +447,7 @@ export function Services() {
                   ))}
                 </ul>
                 <p className="mt-6 text-sm text-zinc-500 dark:text-zinc-500">
-                  Best for: Teams with designers who need a reliable developer.
+                  Best for: Teams who want reliable, ongoing support.
                 </p>
                 <motion.a
                   href="#services-contact"

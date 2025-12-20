@@ -5,8 +5,8 @@ export const translations = {
       badge: "Available for new projects",
       title: "Sam Nakazaki",
       subtitle: "Full Stack Developer",
-      description: "Building web applications with Ruby on Rails, React, and Next.js.",
-      location: "Based in Tokyo, Japan.",
+      description: "I build web tools for foreign businesses in Japan—from simple sites to custom applications.",
+      location: "Based in Tokyo.",
       viewProjects: "View Projects",
       services: "Services",
       contactMe: "Contact Me",
@@ -93,9 +93,9 @@ export const translations = {
     // Services
     services: {
       badge: "Available for new projects",
-      title: "Landing Pages for",
-      titleHighlight: "Startups in Japan",
-      tagline: "Fast delivery. Clear communication. No surprises.",
+      title: "Web Tools for",
+      titleHighlight: "Foreign Businesses in Japan",
+      tagline: "From simple sites to custom applications. Fast, clear, delivered.",
       tiredOf: "Tired of this?",
       painPoints: {
         agencies: "Agencies that take months to deliver",
@@ -110,7 +110,7 @@ export const translations = {
       // About section
       aboutLocation: "Tokyo, Japan",
       aboutName: "I'm Sam Nakazaki",
-      aboutDescription: "A bilingual web developer who builds landing pages for startups in Japan.",
+      aboutDescription: "A bilingual developer who builds web tools for foreign businesses in Japan—from simple sites to custom applications.",
       aboutDetail: "I reply fast, communicate in plain English (or Japanese), and actually deliver when I say I will.",
       nativeEnglish: "Native English",
       fluentJapanese: "Fluent Japanese",
@@ -142,27 +142,44 @@ export const translations = {
       pricingTitle: "Simple, transparent pricing",
       pricingSubtitle: "No hidden fees. No surprise costs. You know exactly what you're paying for.",
       mostPopular: "Most Popular",
-      fullService: {
-        title: "Full Service",
-        price: "¥150,000",
-        starting: "starting",
-        description: "I design and build your landing page from scratch.",
+      quickBuilds: {
+        title: "Quick Builds",
+        price: "¥80,000 – ¥150,000",
+        starting: "",
+        description: "Landing pages, single-page sites. Get online fast.",
         features: [
-          "Custom design tailored to your brand",
+          "1–2 week delivery",
           "Mobile responsive",
           "Basic SEO setup",
-          "One round of revisions",
           "You own everything",
         ],
-        bestFor: "Best for: Companies who need the whole thing handled.",
+        bestFor: "Best for: Companies who need a simple site, fast.",
       },
-      buildOnly: {
-        title: "Build Only",
-        price: "¥80,000",
-        starting: "starting",
-        description: "Already have a Figma or Photoshop design? I'll bring it to life.",
-        features: ["Pixel-perfect build from your design", "Mobile responsive", "Basic SEO setup"],
-        bestFor: "Best for: Teams with designers who need a reliable developer.",
+      webApps: {
+        title: "Web Applications",
+        price: "¥300,000+",
+        starting: "scoped per project",
+        description: "Booking systems, dashboards, internal tools. Built to spec.",
+        features: [
+          "User authentication",
+          "Database & admin panels",
+          "Custom functionality",
+          "Timeline depends on scope",
+        ],
+        bestFor: "Best for: Businesses needing custom tools that work.",
+      },
+      ongoingSupport: {
+        title: "Ongoing Support",
+        price: "Monthly retainer",
+        starting: "price on request",
+        description: "Keep your site running smoothly. I handle the technical side.",
+        features: [
+          "Maintenance & updates",
+          "Bug fixes & iterations",
+          "Hosting management",
+          "Priority response",
+        ],
+        bestFor: "Best for: Teams who want reliable, ongoing support.",
       },
       getStarted: "Get started",
 
@@ -191,21 +208,20 @@ export const translations = {
       faqTitle: "Questions?",
       faqs: [
         {
-          question: "What if I need more than a landing page?",
-          answer: "Absolutely! I build full-scale web applications too—databases, backends, the whole thing. I also do mobile apps with React Native. We'd just need to discuss the details properly. Please reach out, I'd love to help!",
+          question: "How do you scope larger projects?",
+          answer: "We start with a call to understand what you need. I'll ask about your users, your workflow, and what success looks like. Then I send a clear proposal with scope, timeline, and cost—no surprises.",
         },
         {
-          question: "Can you write the copy too?",
-          answer:
-            "I can help refine it, but you know your business best. If you need a copywriter, I can recommend someone.",
-        },
-        {
-          question: "What's your tech stack?",
-          answer: "Ruby on Rails for backends, React/TypeScript and Next.js for frontends, React Native for mobile apps. For simpler landing pages, HTML/CSS/JS works great too.",
+          question: "Can you work with our existing systems?",
+          answer: "Yes. I can integrate with your current tools, APIs, or databases. If you're starting fresh, I'll recommend what makes sense for your use case.",
         },
         {
           question: "Do you work with Japanese companies too?",
           answer: "Yes—I'm fully bilingual and comfortable working in either language.",
+        },
+        {
+          question: "What happens after launch?",
+          answer: "I offer ongoing support if you need it—maintenance, updates, fixes. Or I can hand everything over and you're set. Your call.",
         },
       ],
 
@@ -219,7 +235,7 @@ export const translations = {
       badge: "新規プロジェクト受付中",
       title: "中崎サム",
       subtitle: "フルスタックデベロッパー",
-      description: "Ruby on Rails、React、Next.jsでWebアプリケーションを開発しています。",
+      description: "日本の外国企業向けにWebツールを開発しています。シンプルなサイトからカスタムアプリまで。",
       location: "東京在住",
       viewProjects: "プロジェクトを見る",
       services: "サービス",
@@ -306,9 +322,9 @@ export const translations = {
     // Services
     services: {
       badge: "新規プロジェクト受付中",
-      title: "ランディングページ制作",
-      titleHighlight: "日本のスタートアップ向け",
-      tagline: "迅速な納品。明確なコミュニケーション。サプライズなし。",
+      title: "Webツール開発",
+      titleHighlight: "日本の外国企業向け",
+      tagline: "シンプルなサイトからカスタムアプリまで。迅速・明確・確実。",
       tiredOf: "こんな経験ありませんか？",
       painPoints: {
         agencies: "納品まで何ヶ月もかかる制作会社",
@@ -323,7 +339,7 @@ export const translations = {
       // About section
       aboutLocation: "東京",
       aboutName: "中崎サムです",
-      aboutDescription: "日本のスタートアップ向けにランディングページを制作するバイリンガルのWeb開発者です。",
+      aboutDescription: "日本の外国企業向けにWebツールを開発するバイリンガルのデベロッパーです。シンプルなサイトからカスタムアプリまで対応。",
       aboutDetail: "迅速に返信し、分かりやすい英語（または日本語）でコミュニケーションを取り、約束通りに納品します。",
       nativeEnglish: "英語ネイティブ",
       fluentJapanese: "日本語堪能",
@@ -355,27 +371,44 @@ export const translations = {
       pricingTitle: "シンプルで透明な料金",
       pricingSubtitle: "隠れた費用なし。サプライズなし。支払う金額が明確です。",
       mostPopular: "人気No.1",
-      fullService: {
-        title: "フルサービス",
-        price: "¥150,000",
-        starting: "〜",
-        description: "デザインから制作まですべてお任せください。",
+      quickBuilds: {
+        title: "クイックビルド",
+        price: "¥80,000 – ¥150,000",
+        starting: "",
+        description: "ランディングページ、シングルページサイト。素早く公開。",
         features: [
-          "ブランドに合わせたカスタムデザイン",
+          "1〜2週間で納品",
           "モバイル対応",
           "基本的なSEO設定",
-          "1回の修正対応",
           "すべての権利はお客様に帰属",
         ],
-        bestFor: "おすすめ：すべてお任せしたい企業様",
+        bestFor: "おすすめ：シンプルなサイトを素早く必要とする企業様",
       },
-      buildOnly: {
-        title: "コーディングのみ",
-        price: "¥80,000",
-        starting: "〜",
-        description: "FigmaやPhotoshopのデザインがある方向け。実装のみ対応します。",
-        features: ["デザイン通りにピクセル単位で再現", "モバイル対応", "基本的なSEO設定"],
-        bestFor: "おすすめ：デザイナーがいて開発者を探しているチーム",
+      webApps: {
+        title: "Webアプリケーション",
+        price: "¥300,000〜",
+        starting: "要件に応じて見積もり",
+        description: "予約システム、ダッシュボード、社内ツール。仕様通りに構築。",
+        features: [
+          "ユーザー認証",
+          "データベース・管理画面",
+          "カスタム機能",
+          "スコープに応じたスケジュール",
+        ],
+        bestFor: "おすすめ：業務に合ったカスタムツールが必要な企業様",
+      },
+      ongoingSupport: {
+        title: "継続サポート",
+        price: "月額リテイナー",
+        starting: "要相談",
+        description: "サイトの安定運用をお任せください。技術面を担当します。",
+        features: [
+          "保守・更新",
+          "バグ修正・改善",
+          "ホスティング管理",
+          "優先対応",
+        ],
+        bestFor: "おすすめ：信頼できる継続的なサポートを求めるチーム",
       },
       getStarted: "始める",
 
@@ -404,22 +437,20 @@ export const translations = {
       faqTitle: "よくあるご質問",
       faqs: [
         {
-          question: "ランディングページ以外も対応できますか？",
-          answer: "もちろんです！データベースやバックエンドを含むフルスケールのWebアプリケーションも制作できます。React Nativeでのモバイルアプリ開発も可能です。詳細はしっかり打ち合わせが必要ですが、ぜひお気軽にご相談ください！",
+          question: "大規模なプロジェクトはどのように見積もりますか？",
+          answer: "まずは打ち合わせで、ユーザー、ワークフロー、成功の定義を確認します。その後、スコープ・スケジュール・費用を明記した提案書をお送りします。サプライズはありません。",
         },
         {
-          question: "コピーライティングもお願いできますか？",
-          answer:
-            "ブラッシュアップのお手伝いは可能ですが、ビジネスを一番よく知っているのはお客様です。コピーライターが必要な場合はご紹介できます。",
-        },
-        {
-          question: "使用する技術は？",
-          answer:
-            "バックエンドはRuby on Rails、フロントエンドはReact/TypeScriptとNext.js、モバイルアプリはReact Nativeを使用します。シンプルなランディングページならHTML/CSS/JSでも対応可能です。",
+          question: "既存のシステムと連携できますか？",
+          answer: "はい。既存のツール、API、データベースとの連携が可能です。ゼロから始める場合は、用途に合った構成をご提案します。",
         },
         {
           question: "日本の企業とも仕事していますか？",
           answer: "はい、完全なバイリンガルですので、どちらの言語でも対応可能です。",
+        },
+        {
+          question: "公開後のサポートは？",
+          answer: "必要に応じて継続サポートを提供します—保守、更新、修正など。もちろん、すべてお渡しして終了も可能です。ご希望に合わせます。",
         },
       ],
 

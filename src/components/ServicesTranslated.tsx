@@ -281,9 +281,48 @@ export function ServicesTranslated() {
             </p>
           </FadeIn>
 
-          <div className="mt-12 grid gap-8 lg:grid-cols-2">
-            {/* Full Service Card */}
+          <div className="mt-12 grid gap-8 lg:grid-cols-3">
+            {/* Quick Builds Card */}
             <FadeIn delay={0.1}>
+              <motion.div
+                className="relative overflow-hidden rounded-3xl border border-zinc-200 bg-white p-8 shadow-lg dark:border-zinc-800 dark:bg-zinc-900"
+                whileHover={{ y: -8, transition: { duration: 0.3 } }}
+              >
+                <h3 className="text-2xl font-bold text-zinc-900 dark:text-white">{t.services.quickBuilds.title}</h3>
+                <div className="mt-4 flex items-baseline gap-2">
+                  <span className="text-3xl font-bold text-zinc-900 dark:text-white">{t.services.quickBuilds.price}</span>
+                </div>
+                <p className="mt-4 text-zinc-600 dark:text-zinc-400">
+                  {t.services.quickBuilds.description}
+                </p>
+                <ul className="mt-8 space-y-4">
+                  {t.services.quickBuilds.features.map((feature, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <div className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-zinc-100 dark:bg-zinc-800">
+                        <svg className="h-4 w-4 text-zinc-600 dark:text-zinc-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <span className="text-zinc-700 dark:text-zinc-300">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-6 text-sm text-zinc-500 dark:text-zinc-500">
+                  {t.services.quickBuilds.bestFor}
+                </p>
+                <motion.a
+                  href="#services-contact"
+                  className="mt-8 block w-full rounded-xl border-2 border-zinc-200 py-4 text-center font-semibold text-zinc-700 transition-all hover:border-purple-300 hover:text-purple-600 dark:border-zinc-700 dark:text-zinc-300 dark:hover:border-purple-600 dark:hover:text-purple-400"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  {t.services.getStarted}
+                </motion.a>
+              </motion.div>
+            </FadeIn>
+
+            {/* Web Applications Card */}
+            <FadeIn delay={0.2}>
               <motion.div
                 className="relative overflow-hidden rounded-3xl border-2 border-purple-200 bg-white p-8 shadow-xl dark:border-purple-800 dark:bg-zinc-900"
                 whileHover={{ y: -8, transition: { duration: 0.3 } }}
@@ -293,16 +332,16 @@ export function ServicesTranslated() {
                   <div className="inline-flex rounded-full bg-purple-100 px-3 py-1 dark:bg-purple-900/50">
                     <span className="text-sm font-semibold text-purple-700 dark:text-purple-300">{t.services.mostPopular}</span>
                   </div>
-                  <h3 className="mt-4 text-2xl font-bold text-zinc-900 dark:text-white">{t.services.fullService.title}</h3>
+                  <h3 className="mt-4 text-2xl font-bold text-zinc-900 dark:text-white">{t.services.webApps.title}</h3>
                   <div className="mt-4 flex items-baseline gap-2">
-                    <span className="text-4xl font-bold text-zinc-900 dark:text-white">{t.services.fullService.price}</span>
-                    <span className="text-zinc-500">{t.services.fullService.starting}</span>
+                    <span className="text-3xl font-bold text-zinc-900 dark:text-white">{t.services.webApps.price}</span>
+                    <span className="text-zinc-500">{t.services.webApps.starting}</span>
                   </div>
                   <p className="mt-4 text-zinc-600 dark:text-zinc-400">
-                    {t.services.fullService.description}
+                    {t.services.webApps.description}
                   </p>
                   <ul className="mt-8 space-y-4">
-                    {t.services.fullService.features.map((feature, i) => (
+                    {t.services.webApps.features.map((feature, i) => (
                       <li key={i} className="flex items-start gap-3">
                         <div className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-purple-100 dark:bg-purple-900/50">
                           <svg className="h-4 w-4 text-purple-600 dark:text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -314,7 +353,7 @@ export function ServicesTranslated() {
                     ))}
                   </ul>
                   <p className="mt-6 text-sm text-zinc-500 dark:text-zinc-500">
-                    {t.services.fullService.bestFor}
+                    {t.services.webApps.bestFor}
                   </p>
                   <motion.a
                     href="#services-contact"
@@ -328,22 +367,22 @@ export function ServicesTranslated() {
               </motion.div>
             </FadeIn>
 
-            {/* Build Only Card */}
-            <FadeIn delay={0.2}>
+            {/* Ongoing Support Card */}
+            <FadeIn delay={0.3}>
               <motion.div
                 className="relative overflow-hidden rounded-3xl border border-zinc-200 bg-white p-8 shadow-lg dark:border-zinc-800 dark:bg-zinc-900"
                 whileHover={{ y: -8, transition: { duration: 0.3 } }}
               >
-                <h3 className="text-2xl font-bold text-zinc-900 dark:text-white">{t.services.buildOnly.title}</h3>
+                <h3 className="text-2xl font-bold text-zinc-900 dark:text-white">{t.services.ongoingSupport.title}</h3>
                 <div className="mt-4 flex items-baseline gap-2">
-                  <span className="text-4xl font-bold text-zinc-900 dark:text-white">{t.services.buildOnly.price}</span>
-                  <span className="text-zinc-500">{t.services.buildOnly.starting}</span>
+                  <span className="text-3xl font-bold text-zinc-900 dark:text-white">{t.services.ongoingSupport.price}</span>
                 </div>
+                <p className="mt-1 text-sm text-zinc-500">{t.services.ongoingSupport.starting}</p>
                 <p className="mt-4 text-zinc-600 dark:text-zinc-400">
-                  {t.services.buildOnly.description}
+                  {t.services.ongoingSupport.description}
                 </p>
                 <ul className="mt-8 space-y-4">
-                  {t.services.buildOnly.features.map((feature, i) => (
+                  {t.services.ongoingSupport.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <div className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-zinc-100 dark:bg-zinc-800">
                         <svg className="h-4 w-4 text-zinc-600 dark:text-zinc-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -355,7 +394,7 @@ export function ServicesTranslated() {
                   ))}
                 </ul>
                 <p className="mt-6 text-sm text-zinc-500 dark:text-zinc-500">
-                  {t.services.buildOnly.bestFor}
+                  {t.services.ongoingSupport.bestFor}
                 </p>
                 <motion.a
                   href="#services-contact"
