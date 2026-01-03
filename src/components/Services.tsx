@@ -26,6 +26,39 @@ const howItWorks = [
   { step: "05", title: "You launch", description: "Usually within 1–2 weeks" },
 ];
 
+const specializations = [
+  {
+    icon: "cart",
+    title: "EC Websites",
+    description: "Full e-commerce solutions with Japanese payment gateways, inventory management, and mobile-first design.",
+  },
+  {
+    icon: "payment",
+    title: "Payment Systems",
+    description: "Stripe, PayPay, LINE Pay, and konbini payment integration. The options Japanese customers actually use.",
+  },
+  {
+    icon: "line",
+    title: "LINE Integration",
+    description: "LINE Official Account setup, messaging APIs, login integration, and LINE Mini App development.",
+  },
+  {
+    icon: "mobile",
+    title: "Mobile & SEO",
+    description: "Mobile-first responsive design with Japanese SEO optimization, schema markup, and Core Web Vitals.",
+  },
+  {
+    icon: "language",
+    title: "Multi-language",
+    description: "Japanese/English bilingual sites with proper i18n, URL structure, and hreflang for international SEO.",
+  },
+  {
+    icon: "form",
+    title: "Forms & Booking",
+    description: "Contact forms, reservation systems, and inquiry management tailored for Japanese business etiquette.",
+  },
+];
+
 const faqs = [
   {
     question: "How do you scope larger projects?",
@@ -269,6 +302,50 @@ export function Services() {
                 </div>
               </div>
             </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* Specializations Section */}
+      <section className="relative overflow-hidden px-6 py-24">
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute inset-0 bg-gradient-to-b from-white via-purple-50/50 to-white dark:from-zinc-950 dark:via-purple-950/10 dark:to-zinc-950" />
+        </div>
+        <div className="mx-auto max-w-6xl">
+          <FadeIn>
+            <h2 className="text-center text-3xl font-bold text-zinc-900 dark:text-white sm:text-4xl">
+              Built for Japan
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-center text-lg text-zinc-600 dark:text-zinc-400">
+              Solutions designed for the Japanese market
+            </p>
+          </FadeIn>
+
+          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {specializations.map((item, index) => (
+              <FadeIn key={index} delay={index * 0.1}>
+                <motion.div
+                  className="group relative h-full overflow-hidden rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm transition-all hover:border-purple-200 hover:shadow-lg dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-purple-800"
+                  whileHover={{ y: -4, transition: { duration: 0.2 } }}
+                >
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-purple-100 to-indigo-100 text-2xl dark:from-purple-900/50 dark:to-indigo-900/50">
+                    {item.icon === "cart" && "🛒"}
+                    {item.icon === "payment" && "💳"}
+                    {item.icon === "line" && "💬"}
+                    {item.icon === "mobile" && "📱"}
+                    {item.icon === "language" && "🌐"}
+                    {item.icon === "form" && "📝"}
+                  </div>
+                  <h3 className="text-lg font-semibold text-zinc-900 dark:text-white">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+                    {item.description}
+                  </p>
+                  <div className="absolute -right-8 -top-8 h-24 w-24 rounded-full bg-purple-100/50 blur-2xl transition-all group-hover:bg-purple-200/50 dark:bg-purple-900/20 dark:group-hover:bg-purple-800/30" />
+                </motion.div>
+              </FadeIn>
+            ))}
           </div>
         </div>
       </section>

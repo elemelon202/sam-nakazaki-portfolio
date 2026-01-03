@@ -128,6 +128,42 @@ export const translations = {
         description: "I bridge Western expectations with Japanese market needs.",
       },
 
+      // Specializations
+      specializationsTitle: "Built for Japan",
+      specializationsSubtitle: "Solutions designed for the Japanese market",
+      specializations: [
+        {
+          icon: "cart",
+          title: "EC Websites",
+          description: "Full e-commerce solutions with Japanese payment gateways, inventory management, and mobile-first design.",
+        },
+        {
+          icon: "payment",
+          title: "Payment Systems",
+          description: "Stripe, PayPay, LINE Pay, and konbini payment integration. The options Japanese customers actually use.",
+        },
+        {
+          icon: "line",
+          title: "LINE Integration",
+          description: "LINE Official Account setup, messaging APIs, login integration, and LINE Mini App development.",
+        },
+        {
+          icon: "mobile",
+          title: "Mobile & SEO",
+          description: "Mobile-first responsive design with Japanese SEO optimization, schema markup, and Core Web Vitals.",
+        },
+        {
+          icon: "language",
+          title: "Multi-language",
+          description: "Japanese/English bilingual sites with proper i18n, URL structure, and hreflang for international SEO.",
+        },
+        {
+          icon: "form",
+          title: "Forms & Booking",
+          description: "Contact forms, reservation systems, and inquiry management tailored for Japanese business etiquette.",
+        },
+      ],
+
       // Comparison
       comparisonTitle: "What's different?",
       comparison: {
@@ -356,6 +392,42 @@ export const translations = {
         title: "バイリンガルサポート",
         description: "欧米の期待と日本市場のニーズの架け橋となります。",
       },
+
+      // Specializations
+      specializationsTitle: "日本市場に特化",
+      specializationsSubtitle: "日本のビジネスニーズに合わせたソリューション",
+      specializations: [
+        {
+          icon: "cart",
+          title: "ECサイト",
+          description: "日本の決済ゲートウェイ、在庫管理、モバイルファーストデザインを備えたフルECソリューション。",
+        },
+        {
+          icon: "payment",
+          title: "決済システム",
+          description: "Stripe、PayPay、LINE Pay、コンビニ決済連携。日本のお客様が実際に使う決済方法。",
+        },
+        {
+          icon: "line",
+          title: "LINE連携",
+          description: "LINE公式アカウント設定、メッセージングAPI、ログイン連携、LINEミニアプリ開発。",
+        },
+        {
+          icon: "mobile",
+          title: "モバイル・SEO",
+          description: "モバイルファーストのレスポンシブデザイン、日本語SEO最適化、構造化マークアップ、Core Web Vitals対応。",
+        },
+        {
+          icon: "language",
+          title: "多言語対応",
+          description: "日英バイリンガルサイト、適切なi18n設計、URL構造、インターナショナルSEO用hreflang設定。",
+        },
+        {
+          icon: "form",
+          title: "フォーム・予約",
+          description: "日本のビジネス慣行に合わせた問い合わせフォーム、予約システム、お問い合わせ管理。",
+        },
+      ],
 
       // Comparison
       comparisonTitle: "何が違う？",
