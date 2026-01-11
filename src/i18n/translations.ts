@@ -69,6 +69,14 @@ export const translations = {
         description:
           "A React project fetching recent data about popular video games. The app makes great use of Chakra UI components, and delivers a comfortable user experience with minimal wait time.",
       },
+      koyo: {
+        description:
+          "A landing page for a Kyoto-based tea company selling matcha in Dubai. Fully localized in English, Japanese, and Arabic to reach a diverse international audience.",
+      },
+      sessionLive: {
+        description:
+          "A promotional landing page for a regular blues rock event in Tokyo. Features live countdown timers, updated event info, ticket purchasing with Stripe integration, and smooth GSAP animations for an engaging user experience.",
+      },
     },
 
     // Contact
@@ -334,6 +342,14 @@ export const translations = {
       gameHub: {
         description:
           "人気テレビゲームの最新データを取得するReactプロジェクト。Chakra UIコンポーネントを活用し、最小限の待ち時間で快適なユーザー体験を提供。",
+      },
+      koyo: {
+        description:
+          "ドバイで抹茶を販売する京都の茶葉会社のランディングページ。英語、日本語、アラビア語に完全対応し、多様な国際的なオーディエンスにリーチ。",
+      },
+      sessionLive: {
+        description:
+          "東京で定期開催されるブルースロックイベントのプロモーションページ。ライブカウントダウン、最新イベント情報、Stripe連携によるチケット購入、GSAPアニメーションによる魅力的なユーザー体験を実現。",
       },
     },
 

@@ -58,6 +58,22 @@ export function ProjectsTranslated() {
       image: "/projects/game-hub.png",
       featured: false,
     },
+    {
+      title: "Koyo",
+      description: t.projects.koyo.description,
+      tech: ["HTML", "CSS", "JavaScript"],
+      live: "https://koyo-three.vercel.app/ar.html",
+      image: "/projects/koyo.png",
+      featured: false,
+    },
+    {
+      title: "Session Live",
+      description: t.projects.sessionLive.description,
+      tech: ["HTML", "CSS", "JavaScript", "Stripe", "GSAP"],
+      live: "https://session-live.vercel.app/",
+      image: "/projects/session-live.png",
+      featured: false,
+    },
   ];
 
   return (

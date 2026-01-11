@@ -32,6 +32,24 @@ const projects = [
     image: "/projects/game-hub.png",
     featured: false,
   },
+  {
+    title: "Koyo",
+    description:
+      "A landing page for a Kyoto-based tea company selling matcha in Dubai. Fully localized in English, Japanese, and Arabic to reach a diverse international audience.",
+    tech: ["HTML", "CSS", "JavaScript"],
+    live: "https://koyo-three.vercel.app/ar.html",
+    image: "/projects/koyo.png",
+    featured: false,
+  },
+  {
+    title: "Session Live",
+    description:
+      "A promotional landing page for a regular blues rock event in Tokyo. Features live countdown timers, updated event info, ticket purchasing with Stripe integration, and smooth GSAP animations for an engaging user experience.",
+    tech: ["HTML", "CSS", "JavaScript", "Stripe", "GSAP"],
+    live: "https://session-live.vercel.app/",
+    image: "/projects/session-live.png",
+    featured: false,
+  },
 ];
 
 function DeviceMockup({ src, alt }: { src: string; alt: string }) {
