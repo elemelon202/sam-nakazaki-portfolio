@@ -5,7 +5,7 @@ export const translations = {
       badge: "Available for new projects",
       title: "Sam Nakazaki",
       subtitle: "Full Stack Developer",
-      description: "I build web tools for foreign businesses in Japan—from simple sites to custom applications.",
+      description: "I build bilingual web tools that help businesses cross borders—whether you're entering Japan or reaching overseas.",
       location: "Based in Tokyo.",
       viewProjects: "View Projects",
       services: "Services",
@@ -101,9 +101,9 @@ export const translations = {
     // Services
     services: {
       badge: "Available for new projects",
-      title: "Web Tools for",
-      titleHighlight: "Foreign Businesses in Japan",
-      tagline: "From simple sites to custom applications. Fast, clear, delivered.",
+      title: "Bilingual Web Development",
+      titleHighlight: "That Crosses Borders",
+      tagline: "Helping foreign companies succeed in Japan—and Japanese companies reach the world.",
       tiredOf: "Tired of this?",
       painPoints: {
         agencies: "Agencies that take months to deliver",
@@ -118,7 +118,7 @@ export const translations = {
       // About section
       aboutLocation: "Tokyo, Japan",
       aboutName: "I'm Sam Nakazaki",
-      aboutDescription: "A bilingual developer who builds web tools for foreign businesses in Japan—from simple sites to custom applications.",
+      aboutDescription: "A bilingual developer who helps businesses cross language barriers—whether you're entering Japan or reaching overseas markets.",
       aboutDetail: "I reply fast, communicate in plain English (or Japanese), and actually deliver when I say I will.",
       nativeEnglish: "Native English",
       fluentJapanese: "Fluent Japanese",
@@ -133,13 +133,13 @@ export const translations = {
       },
       bilingualSupport: {
         title: "Bilingual support",
-        description: "I bridge Western expectations with Japanese market needs.",
+        description: "I bridge Western and Japanese markets—in both directions.",
       },
 
-      // Specializations
-      specializationsTitle: "Built for Japan",
-      specializationsSubtitle: "Solutions designed for the Japanese market",
-      specializations: [
+      // For Foreign Companies Section
+      forForeignTitle: "For Foreign Companies in Japan",
+      forForeignSubtitle: "Navigate the Japanese market with confidence",
+      forForeignSpecializations: [
         {
           icon: "cart",
           title: "EC Websites",
@@ -147,7 +147,7 @@ export const translations = {
         },
         {
           icon: "payment",
-          title: "Payment Systems",
+          title: "Japanese Payments",
           description: "Stripe, PayPay, LINE Pay, and konbini payment integration. The options Japanese customers actually use.",
         },
         {
@@ -157,18 +157,54 @@ export const translations = {
         },
         {
           icon: "mobile",
-          title: "Mobile & SEO",
+          title: "Japanese SEO",
           description: "Mobile-first responsive design with Japanese SEO optimization, schema markup, and Core Web Vitals.",
         },
         {
           icon: "language",
-          title: "Multi-language",
-          description: "Japanese/English bilingual sites with proper i18n, URL structure, and hreflang for international SEO.",
+          title: "Bilingual Sites",
+          description: "Japanese/English sites with proper i18n, URL structure, and hreflang for international SEO.",
         },
         {
           icon: "form",
           title: "Forms & Booking",
           description: "Contact forms, reservation systems, and inquiry management tailored for Japanese business etiquette.",
+        },
+      ],
+
+      // For Japanese Companies Section
+      forJapaneseTitle: "For Japanese Companies Going Global",
+      forJapaneseSubtitle: "Reach international customers with sites that work",
+      forJapaneseSpecializations: [
+        {
+          icon: "globe",
+          title: "English Websites",
+          description: "Professional English sites written by a native speaker—no awkward translations or cultural missteps.",
+        },
+        {
+          icon: "payment",
+          title: "Global Payments",
+          description: "Stripe, PayPal, and international payment gateways that overseas customers trust and use.",
+        },
+        {
+          icon: "seo",
+          title: "International SEO",
+          description: "English SEO, Google-friendly structure, and proper hreflang setup to rank in overseas markets.",
+        },
+        {
+          icon: "language",
+          title: "Multilingual Sites",
+          description: "English, Japanese, and other languages with proper localization—not just translation.",
+        },
+        {
+          icon: "cart",
+          title: "Global E-commerce",
+          description: "Shopify, international shipping integration, and checkout flows optimized for Western customers.",
+        },
+        {
+          icon: "consulting",
+          title: "Western UX",
+          description: "Design patterns and user experiences that feel natural to American, European, and global audiences.",
         },
       ],
 
@@ -279,7 +315,7 @@ export const translations = {
       badge: "新規プロジェクト受付中",
       title: "中崎サム",
       subtitle: "フルスタックデベロッパー",
-      description: "日本の外国企業向けにWebツールを開発しています。シンプルなサイトからカスタムアプリまで。",
+      description: "国境を越えるバイリンガルWebツールを開発しています。日本進出も海外展開もサポート。",
       location: "東京在住",
       viewProjects: "プロジェクトを見る",
       services: "サービス",
@@ -374,9 +410,9 @@ export const translations = {
     // Services
     services: {
       badge: "新規プロジェクト受付中",
-      title: "Webツール開発",
-      titleHighlight: "日本の外国企業向け",
-      tagline: "シンプルなサイトからカスタムアプリまで。迅速・明確・確実。",
+      title: "バイリンガルWeb開発",
+      titleHighlight: "国境を越える",
+      tagline: "外国企業の日本進出から、日本企業の海外展開まで。",
       tiredOf: "こんな経験ありませんか？",
       painPoints: {
         agencies: "納品まで何ヶ月もかかる制作会社",
@@ -391,7 +427,7 @@ export const translations = {
       // About section
       aboutLocation: "東京",
       aboutName: "中崎サムです",
-      aboutDescription: "日本の外国企業向けにWebツールを開発するバイリンガルのデベロッパーです。シンプルなサイトからカスタムアプリまで対応。",
+      aboutDescription: "言葉の壁を越えるお手伝いをするバイリンガルのデベロッパーです。日本進出も海外展開もサポートします。",
       aboutDetail: "迅速に返信し、分かりやすい英語（または日本語）でコミュニケーションを取り、約束通りに納品します。",
       nativeEnglish: "英語ネイティブ",
       fluentJapanese: "日本語堪能",
@@ -406,13 +442,13 @@ export const translations = {
       },
       bilingualSupport: {
         title: "バイリンガルサポート",
-        description: "欧米の期待と日本市場のニーズの架け橋となります。",
+        description: "欧米と日本の市場を双方向で繋ぎます。",
       },
 
-      // Specializations
-      specializationsTitle: "日本市場に特化",
-      specializationsSubtitle: "日本のビジネスニーズに合わせたソリューション",
-      specializations: [
+      // For Foreign Companies Section
+      forForeignTitle: "外国企業向け：日本進出サポート",
+      forForeignSubtitle: "日本市場への参入を自信を持ってサポート",
+      forForeignSpecializations: [
         {
           icon: "cart",
           title: "ECサイト",
@@ -420,7 +456,7 @@ export const translations = {
         },
         {
           icon: "payment",
-          title: "決済システム",
+          title: "日本向け決済",
           description: "Stripe、PayPay、LINE Pay、コンビニ決済連携。日本のお客様が実際に使う決済方法。",
         },
         {
@@ -430,18 +466,54 @@ export const translations = {
         },
         {
           icon: "mobile",
-          title: "モバイル・SEO",
+          title: "日本語SEO",
           description: "モバイルファーストのレスポンシブデザイン、日本語SEO最適化、構造化マークアップ、Core Web Vitals対応。",
         },
         {
           icon: "language",
-          title: "多言語対応",
+          title: "バイリンガルサイト",
           description: "日英バイリンガルサイト、適切なi18n設計、URL構造、インターナショナルSEO用hreflang設定。",
         },
         {
           icon: "form",
           title: "フォーム・予約",
           description: "日本のビジネス慣行に合わせた問い合わせフォーム、予約システム、お問い合わせ管理。",
+        },
+      ],
+
+      // For Japanese Companies Section
+      forJapaneseTitle: "日本企業向け：海外展開サポート",
+      forJapaneseSubtitle: "海外のお客様に届くサイトを構築",
+      forJapaneseSpecializations: [
+        {
+          icon: "globe",
+          title: "英語サイト",
+          description: "ネイティブスピーカーが作成するプロフェッショナルな英語サイト。不自然な翻訳や文化的なミスはありません。",
+        },
+        {
+          icon: "payment",
+          title: "海外向け決済",
+          description: "Stripe、PayPalなど、海外のお客様が信頼し利用する国際決済ゲートウェイ。",
+        },
+        {
+          icon: "seo",
+          title: "海外SEO",
+          description: "英語SEO、Google対応の構造、海外市場で上位表示するための適切なhreflang設定。",
+        },
+        {
+          icon: "language",
+          title: "多言語サイト",
+          description: "英語、日本語、その他言語への対応。単なる翻訳ではなく、適切なローカライゼーション。",
+        },
+        {
+          icon: "cart",
+          title: "海外向けEC",
+          description: "Shopify連携、国際配送対応、欧米のお客様に最適化されたチェックアウトフロー。",
+        },
+        {
+          icon: "consulting",
+          title: "欧米向けUX",
+          description: "アメリカ、ヨーロッパ、その他海外のユーザーにとって自然なデザインパターンとユーザー体験。",
         },
       ],
 
