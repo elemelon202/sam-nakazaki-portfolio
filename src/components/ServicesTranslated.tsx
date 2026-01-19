@@ -263,12 +263,12 @@ export function ServicesTranslated() {
                   whileHover={{ y: -4, transition: { duration: 0.2 } }}
                 >
                   <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-100 to-purple-100 text-2xl dark:from-indigo-900/50 dark:to-purple-900/50">
-                    {item.icon === "cart" && "🛒"}
-                    {item.icon === "payment" && "💳"}
+                    {item.icon === "bot" && "🤖"}
                     {item.icon === "line" && "💬"}
-                    {item.icon === "mobile" && "📱"}
+                    {item.icon === "automation" && "⚡"}
                     {item.icon === "language" && "🌐"}
-                    {item.icon === "form" && "📝"}
+                    {item.icon === "analytics" && "📊"}
+                    {item.icon === "cart" && "🛒"}
                   </div>
                   <h3 className="text-lg font-semibold text-zinc-900 dark:text-white">
                     {item.title}
@@ -312,12 +312,12 @@ export function ServicesTranslated() {
                   whileHover={{ y: -4, transition: { duration: 0.2 } }}
                 >
                   <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-100 to-teal-100 text-2xl dark:from-emerald-900/50 dark:to-teal-900/50">
+                    {item.icon === "bot" && "🤖"}
                     {item.icon === "globe" && "🌍"}
-                    {item.icon === "payment" && "💳"}
-                    {item.icon === "seo" && "📈"}
-                    {item.icon === "language" && "🌐"}
+                    {item.icon === "automation" && "⚡"}
+                    {item.icon === "analytics" && "📊"}
                     {item.icon === "cart" && "🛒"}
-                    {item.icon === "consulting" && "🎨"}
+                    {item.icon === "consulting" && "🛠️"}
                   </div>
                   <h3 className="text-lg font-semibold text-zinc-900 dark:text-white">
                     {item.title}
